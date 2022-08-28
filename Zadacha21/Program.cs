@@ -1,11 +1,10 @@
-﻿Console.WriteLine ("введите координаты первого числа:");
-// int ax = Convert.ToInt32(Console.ReadLine());
-// int ay = Convert.ToInt32(Console.ReadLine());
-// int az = Convert.ToInt32 (Console.ReadLine());
-// Console.WriteLine ("введите координаты второго числа:");
-// int bx = Convert.ToInt32(Console.ReadLine());
-// int by = Convert.ToInt32(Console.ReadLine());
-// int bz = Convert.ToInt32(Console.ReadLine());
+﻿// Напишите программу, которая принимает на вход координаты двух точек и находит
+// расстояние между ними в 3D пространстве.
+// A (3,6,8); B (2,1,-7), -> 15.84
+// A (7,-5, 0); B (1,-1,9) -> 11.53
+
+
+Console.WriteLine ("введите координаты первого числа:");
 bool isNumberAX = int.TryParse(Console.ReadLine(), out int ax);
 bool isNumberAY = int.TryParse(Console.ReadLine(), out int ay);
 bool isNumberAZ = int.TryParse(Console.ReadLine(), out int az);
