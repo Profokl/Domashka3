@@ -16,6 +16,7 @@ bool isNumberBZ = int.TryParse(Console.ReadLine(), out int bz);
 if (!isNumberAX||!isNumberAY||!isNumberAZ||!isNumberBX||!isNumberBY||!isNumberBZ)
 {
     Console.WriteLine("В данных содержатcя недопустимые символы.Попробуйте заново.");
+    return;
 }
 
 
@@ -26,4 +27,6 @@ double GetDistance (int x, int y, int z, int v, int k, int n)
 }
 
 double res = GetDistance (ax,ay,az,bx,by,bz);
-Console.WriteLine (res);
+
+Console.WriteLine ();
+Console.WriteLine ($"Дистанция:{res}");
