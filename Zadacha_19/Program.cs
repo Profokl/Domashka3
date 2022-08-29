@@ -11,20 +11,22 @@ bool isNumberA = int.TryParse(Console.ReadLine(), out int a);
 if (isNumberA != true)
 {
     Console.WriteLine("В числе содержатcя недопустимые символы.Попробуйте заново.");
+    return;
 }
 
 bool CheckAmount(int b)
 {
-    if (b < 10000 && b > 99999)
+    if (b >= 10000 && b <= 99999)
     {
-        return false;
+        return true;
     }
-    return true;
+    return false;
 }
 bool isCheck = CheckAmount(a);
 if (isCheck == false)
 {
     Console.WriteLine("Попробуйте ввести пятизначное число");
+    return;
 }
 
 string str = a.ToString();
@@ -40,7 +42,7 @@ void FillArray(int[] col)
 
     }
 }
-int compareNumbers(int[] Arr)
+int CompareNumbers(int[] Arr)
 {
     int index = 0;
     int index1 = 4;
@@ -62,11 +64,11 @@ int compareNumbers(int[] Arr)
     return comp;
 }
 FillArray(array);
-compareNumbers(array);
+CompareNumbers(array);
 
 void Print(int[] arr)
 {
-    if (compareNumbers(array) == 0)
+    if (CompareNumbers(array) == 0)
     {
         Console.WriteLine("Это полиндром");
     }
