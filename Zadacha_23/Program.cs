@@ -3,11 +3,27 @@
 // 3 -> 1, 8, 27
 // 5 -> 1, 8, 27, 64, 125
 
-Console.WriteLine("Введите число:");
+Console.WriteLine("Введите целое положительное число:");
 bool isNumberN = int.TryParse(Console.ReadLine(), out int n);
 if (!isNumberN)
 {
-    Console.WriteLine("Это не число!!!");
+    Console.WriteLine("Число введено не верно");
+    return;
+}
+
+bool CheckAmount(int b)
+{
+    if (b >= 1)
+    {
+        return true;
+    }
+    return false;
+}
+bool isCheck = CheckAmount(n);
+if (isCheck == false)
+{
+    Console.WriteLine("Попробуйте ввести целое положительное число");
+    return;
 }
 
 int[] GetCube(int a)
@@ -34,57 +50,4 @@ void PrintCube(int[] b)
 
 GetCube(n);
 PrintCube(GetCube(n));
-
-//int index = 0;
-// int[] array = new int[10];
-//array[index]=new Random().Next(10,100);
-
-
-// if (n == 0)
-// {
-    // int[] array = new int[n + 1];
-
-// if (n < 0)
-// {
-    // int[] array = new int[n * -1];
-// }
-
-
-
-// int[] GetCube(int[]b,int a)
-// {
-//     int i = 0;
-//     int[]res=new int[b.Length];
-//     if (a>0)
-//     {
-//     for (i = 1; i <= a; i++)
-//     {
-//         res[i-1] = (int)Math.Pow(i, 3);
-//     }
-//     }
-//     if (a==0)
-//     {
-//     for (i = 1; i >= a; i++)
-//     {
-//         res[i-1] = (int)Math.Pow(i, 3);
-//     }
-//     }
-//     if (a<0)
-//     {
-//     for (i = 1; i >= a; i++)
-//     {
-//         res[i-1] = (int)Math.Pow(i, 3);
-//     }
-//     }
-//     return res;
-// }
-// void PrintCube(int[] b)
-// {
-//     int i = 0;
-//     int len = b.Length;
-//     for (i = 0; i < len; i++)
-//         Console.Write($" {b[i]} ");
-// }
-
-
 
